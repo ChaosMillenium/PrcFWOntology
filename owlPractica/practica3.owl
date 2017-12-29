@@ -20,11 +20,21 @@
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="Noticias">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Ofertas"/>
+    </owl:disjointWith>
     <rdfs:subClassOf>
       <owl:Class rdf:ID="Informacion"/>
     </rdfs:subClassOf>
   </owl:Class>
+  <owl:Class rdf:ID="Temporadas"/>
   <owl:Class rdf:ID="HabitacionDoble">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Cuna"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="HabitacionSimple"/>
+    </owl:disjointWith>
     <rdfs:subClassOf rdf:resource="#Servicios"/>
   </owl:Class>
   <owl:Class rdf:ID="CasaRural">
@@ -37,29 +47,35 @@
       <owl:Class rdf:about="http://schema.org#Intangible"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:ID="HabitacionSimple">
+  <owl:Class rdf:about="#HabitacionSimple">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Cuna"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#HabitacionDoble"/>
     <rdfs:subClassOf rdf:resource="#Servicios"/>
   </owl:Class>
-  <owl:Class rdf:ID="Cuna">
+  <owl:Class rdf:about="#Cuna">
     <rdfs:subClassOf rdf:resource="#Servicios"/>
+    <owl:disjointWith rdf:resource="#HabitacionSimple"/>
+    <owl:disjointWith rdf:resource="#HabitacionDoble"/>
   </owl:Class>
   <owl:Class rdf:about="http://schema.org#Accomodation">
     <rdfs:subClassOf rdf:resource="http://schema.org#Place"/>
   </owl:Class>
-  <owl:Class rdf:ID="Ofertas">
+  <owl:Class rdf:about="#Ofertas">
+    <owl:disjointWith rdf:resource="#Noticias"/>
     <rdfs:subClassOf rdf:resource="#Informacion"/>
   </owl:Class>
-  <owl:Class rdf:ID="Precios"/>
   <owl:Class rdf:about="http://schema.org#PostalAddress">
     <rdfs:subClassOf rdf:resource="http://schema.org#ContactPoint"/>
   </owl:Class>
-  <owl:ObjectProperty rdf:ID="precios">
-    <rdfs:domain rdf:resource="#CasaRural"/>
-    <rdfs:range rdf:resource="#Precios"/>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="precioServicio">
     <rdfs:domain rdf:resource="#Servicios"/>
-    <rdfs:range rdf:resource="#Precios"/>
+    <rdfs:range rdf:resource="#Temporadas"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="TemporadasCasaRural">
+    <rdfs:range rdf:resource="#Temporadas"/>
+    <rdfs:domain rdf:resource="#CasaRural"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="direccion">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
@@ -94,7 +110,7 @@
     <rdfs:domain rdf:resource="http://schema.org#PostalAddress"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="duracion">
-    <rdfs:domain rdf:resource="#Precios"/>
+    <rdfs:domain rdf:resource="#Temporadas"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://schema.org#addressLocality">
@@ -103,29 +119,31 @@
   </owl:DatatypeProperty>
   <HabitacionDoble rdf:ID="HabitacionDobleAltaLaRosaDelSol">
     <precioServicio>
-      <Precios rdf:ID="TemporadaAltaLaRosaDelSol">
+      <Temporadas rdf:ID="TemporadaAltaLaRosaDelSol">
         <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >Navidad, Semana Satana, verano y puentes</duracion>
-      </Precios>
+      </Temporadas>
     </precioServicio>
     <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
     >50.0</precio>
   </HabitacionDoble>
   <HabitacionDoble rdf:ID="HabitacionDobleBajaLaRosaDelSol">
     <precioServicio>
-      <Precios rdf:ID="TemporadaBajaLaRosaDelSol">
+      <Temporadas rdf:ID="TemporadaBajaLaRosaDelSol">
         <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >Resto del año</duracion>
-      </Precios>
+      </Temporadas>
     </precioServicio>
     <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
     >40.0</precio>
   </HabitacionDoble>
   <CasaRural rdf:ID="LaRosaDelSol">
     <schema:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >637926312</schema:telephone>
-    <schema:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >636885553</schema:telephone>
+    <schema:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >637926312</schema:telephone>
+    <TemporadasCasaRural rdf:resource="#TemporadaBajaLaRosaDelSol"/>
+    <TemporadasCasaRural rdf:resource="#TemporadaAltaLaRosaDelSol"/>
     <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >laRosaDelSolCadiz@gmail.com</email>
     <direccion>
