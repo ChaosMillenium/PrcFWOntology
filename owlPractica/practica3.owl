@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:schema="http://schema.org#"
+    xmlns:j.0="http://schema.org#"
     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:schema="http://schema.org/#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
     xmlns="http://www.ejemplo.org/ontologias/CasasRurales.owl#"
@@ -12,72 +13,137 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xml:base="http://www.ejemplo.org/ontologias/CasasRurales.owl">
   <owl:Ontology rdf:about=""/>
-  <owl:Class rdf:about="http://schema.org#Place"/>
-  <owl:Class rdf:ID="Servicios"/>
-  <owl:Class rdf:about="http://schema.org#ContactPoint">
+  <owl:Class rdf:about="http://schema.org/#Place"/>
+  <owl:Class rdf:ID="Servicios">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;&#xD;
+      Diferentes servicios que la casa rural vende&#xD;
+    &lt;/p&gt;</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://schema.org/#StructuredValue">
     <rdfs:subClassOf>
-      <owl:Class rdf:about="http://schema.org#StructuredValue"/>
+      <owl:Class rdf:about="http://schema.org/#Intangible"/>
     </rdfs:subClassOf>
   </owl:Class>
-  <owl:Class rdf:ID="Noticias">
-    <owl:disjointWith>
-      <owl:Class rdf:ID="Ofertas"/>
-    </owl:disjointWith>
-    <rdfs:subClassOf>
-      <owl:Class rdf:ID="Informacion"/>
-    </rdfs:subClassOf>
+  <owl:Class rdf:ID="Temporadas">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;&#xD;
+      Informacion sobre las temporadas de las casas rurales&#xD;
+    &lt;/p&gt;</rdfs:comment>
   </owl:Class>
-  <owl:Class rdf:ID="Temporadas"/>
   <owl:Class rdf:ID="HabitacionDoble">
     <owl:disjointWith>
-      <owl:Class rdf:ID="Cuna"/>
+      <owl:Class rdf:ID="HabitacionSimple"/>
     </owl:disjointWith>
     <owl:disjointWith>
-      <owl:Class rdf:ID="HabitacionSimple"/>
+      <owl:Class rdf:ID="Cuna"/>
     </owl:disjointWith>
     <rdfs:subClassOf rdf:resource="#Servicios"/>
   </owl:Class>
   <owl:Class rdf:ID="CasaRural">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="direccion"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </owl:equivalentClass>
     <rdfs:subClassOf>
-      <owl:Class rdf:about="http://schema.org#Accomodation"/>
+      <owl:Class rdf:about="http://schema.org/#Accomodation"/>
     </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;&#xD;
+      Clase que relaciona las casas rurales con sus propiedades.&#xD;
+    &lt;/p&gt;</rdfs:comment>
   </owl:Class>
-  <owl:Class rdf:about="http://schema.org#StructuredValue">
+  <owl:Class rdf:about="http://schema.org/#Photograph">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;&#xD;
+      Informacion sobre fotografias&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://schema.org/#Article"/>
+    </owl:disjointWith>
     <rdfs:subClassOf>
-      <owl:Class rdf:about="http://schema.org#Intangible"/>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#CasaRural"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://schema.org/#about"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://schema.org/#CreativeWork"/>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="#HabitacionSimple">
+    <owl:disjointWith rdf:resource="#HabitacionDoble"/>
     <owl:disjointWith>
       <owl:Class rdf:about="#Cuna"/>
     </owl:disjointWith>
-    <owl:disjointWith rdf:resource="#HabitacionDoble"/>
     <rdfs:subClassOf rdf:resource="#Servicios"/>
   </owl:Class>
   <owl:Class rdf:about="#Cuna">
     <rdfs:subClassOf rdf:resource="#Servicios"/>
-    <owl:disjointWith rdf:resource="#HabitacionSimple"/>
     <owl:disjointWith rdf:resource="#HabitacionDoble"/>
+    <owl:disjointWith rdf:resource="#HabitacionSimple"/>
   </owl:Class>
-  <owl:Class rdf:about="http://schema.org#Accomodation">
-    <rdfs:subClassOf rdf:resource="http://schema.org#Place"/>
+  <owl:Class rdf:about="http://schema.org/#Accomodation">
+    <rdfs:subClassOf rdf:resource="http://schema.org/#Place"/>
   </owl:Class>
-  <owl:Class rdf:about="#Ofertas">
-    <owl:disjointWith rdf:resource="#Noticias"/>
-    <rdfs:subClassOf rdf:resource="#Informacion"/>
+  <owl:Class rdf:about="http://schema.org/#Article">
+    <owl:disjointWith rdf:resource="http://schema.org/#Photograph"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/#CreativeWork"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://schema.org/#ContactPoint">
+    <rdfs:subClassOf rdf:resource="http://schema.org/#StructuredValue"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Ofertas">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;&#xD;
+      Informacion sobre Ofertas&#xD;
+    &lt;/p&gt;</rdfs:comment>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://schema.org/#NewsArticle"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://schema.org/#Article"/>
   </owl:Class>
   <owl:Class rdf:about="http://schema.org#PostalAddress">
-    <rdfs:subClassOf rdf:resource="http://schema.org#ContactPoint"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/#ContactPoint"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;&#xD;
+      Informacion sobre localizaciones&#xD;
+    &lt;/p&gt;</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="http://schema.org/#NewsArticle">
+    <owl:disjointWith rdf:resource="#Ofertas"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/#Article"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;&#xD;
+      Informacion sobre Noticias
+    &lt;/p&gt;</rdfs:comment>
   </owl:Class>
   <owl:ObjectProperty rdf:ID="precioServicio">
     <rdfs:domain rdf:resource="#Servicios"/>
     <rdfs:range rdf:resource="#Temporadas"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://schema.org/#subjectOf">
+    <rdfs:range rdf:resource="http://schema.org/#CreativeWork"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://schema.org/#about"/>
+    </owl:inverseOf>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:ID="TemporadasCasaRural">
     <rdfs:range rdf:resource="#Temporadas"/>
     <rdfs:domain rdf:resource="#CasaRural"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:ID="direccion">
+  <owl:ObjectProperty rdf:about="http://schema.org/#about">
+    <owl:inverseOf rdf:resource="http://schema.org/#subjectOf"/>
+    <rdfs:domain rdf:resource="http://schema.org/#CreativeWork"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#direccion">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >&lt;p style="margin-top: 0"&gt;&#xD;
       Relaci&amp;#243;n Casas Rurales y Direcci&amp;#243;n&#xD;
@@ -85,51 +151,61 @@
     <rdfs:range rdf:resource="http://schema.org#PostalAddress"/>
     <rdfs:domain rdf:resource="#CasaRural"/>
   </owl:ObjectProperty>
-  <owl:DatatypeProperty rdf:about="http://schema.org#addressRegion">
-    <rdfs:domain rdf:resource="http://schema.org#PostalAddress"/>
+  <owl:DatatypeProperty rdf:about="http://schema.org/#telephone">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://schema.org/#Place"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://schema.org/#addressRegion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://schema.org#PostalAddress"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="email">
     <rdfs:domain rdf:resource="#CasaRural"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://schema.org#addressCountry">
-    <rdfs:domain rdf:resource="http://schema.org#PostalAddress"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-  </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://schema.org#telephone">
-    <rdfs:domain rdf:resource="http://schema.org#Place"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="precio">
     <rdfs:domain rdf:resource="#Servicios"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://schema.org#streetAddress">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:domain rdf:resource="http://schema.org#PostalAddress"/>
-  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="duracion">
     <rdfs:domain rdf:resource="#Temporadas"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://schema.org#addressLocality">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <owl:DatatypeProperty rdf:about="http://schema.org/#streetAddress">
     <rdfs:domain rdf:resource="http://schema.org#PostalAddress"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://schema.org/#addressCountry">
+    <rdfs:domain rdf:resource="http://schema.org#PostalAddress"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://schema.org/#addressLocality">
+    <rdfs:domain rdf:resource="http://schema.org#PostalAddress"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <HabitacionDoble rdf:ID="HabitacionDobleAltaLaRosaDelSol">
     <precioServicio>
       <Temporadas rdf:ID="TemporadaAltaLaRosaDelSol">
         <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >Navidad, Semana Satana, verano y puentes</duracion>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >&lt;p style="margin-top: 0"&gt;&#xD;
+      Duraci&amp;#243;n de la temporada Alta de La Rosa del Sol&#xD;
+    &lt;/p&gt;</rdfs:comment>
       </Temporadas>
     </precioServicio>
     <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
     >50.0</precio>
   </HabitacionDoble>
+  <Ofertas rdf:ID="Grupo_numeroso"/>
+  <schema:NewsArticle rdf:ID="Cierre_temporal_de_la_casa"/>
   <HabitacionDoble rdf:ID="HabitacionDobleBajaLaRosaDelSol">
     <precioServicio>
       <Temporadas rdf:ID="TemporadaBajaLaRosaDelSol">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >&lt;p style="margin-top: 0"&gt;&#xD;
+      Duraci&amp;#243;n de la temporada Baja de La Rosa del Sol&#xD;
+    &lt;/p&gt;</rdfs:comment>
         <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >Resto del año</duracion>
       </Temporadas>
@@ -137,28 +213,42 @@
     <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
     >40.0</precio>
   </HabitacionDoble>
-  <CasaRural rdf:ID="LaRosaDelSol">
-    <schema:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >636885553</schema:telephone>
-    <schema:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >637926312</schema:telephone>
-    <TemporadasCasaRural rdf:resource="#TemporadaBajaLaRosaDelSol"/>
-    <TemporadasCasaRural rdf:resource="#TemporadaAltaLaRosaDelSol"/>
-    <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-    >laRosaDelSolCadiz@gmail.com</email>
-    <direccion>
-      <schema:PostalAddress rdf:ID="CalleLaRosaDelSol">
-        <schema:addressRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >Andalucía</schema:addressRegion>
-        <schema:addressLocality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >Cádiz</schema:addressLocality>
-        <schema:addressCountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >Spain</schema:addressCountry>
-        <schema:streetAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
-        >Carretera Prado del Rey - Zahara de La Sierra (ca-8102) Km.3</schema:streetAddress>
-      </schema:PostalAddress>
-    </direccion>
-  </CasaRural>
+  <Ofertas rdf:ID="Ruta_de_los_Pueblos_Blancos"/>
+  <schema:Photograph rdf:ID="LaRosaDelSolFoto1">
+    <schema:about>
+      <CasaRural rdf:ID="La_Rosa_Del_Sol">
+        <schema:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >637926312</schema:telephone>
+        <schema:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >636885553</schema:telephone>
+        <direccion>
+          <j.0:PostalAddress rdf:ID="CalleLaRosaDelSol">
+            <schema:addressLocality rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Cádiz</schema:addressLocality>
+            <schema:streetAddress rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Carretera Prado del Rey - Zahara de La Sierra (ca-8102) Km.3</schema:streetAddress>
+            <schema:addressCountry rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Spain</schema:addressCountry>
+            <schema:addressRegion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Andalucía</schema:addressRegion>
+          </j.0:PostalAddress>
+        </direccion>
+        <schema:subjectOf rdf:resource="#LaRosaDelSolFoto1"/>
+        <TemporadasCasaRural rdf:resource="#TemporadaAltaLaRosaDelSol"/>
+        <TemporadasCasaRural rdf:resource="#TemporadaBajaLaRosaDelSol"/>
+        <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >laRosaDelSolCadiz@gmail.com</email>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >&lt;p style="margin-top: 0"&gt;&#xD;
+      Casa rural de ejemplo&#xD;
+    &lt;/p&gt;</rdfs:comment>
+      </CasaRural>
+    </schema:about>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >&lt;p style="margin-top: 0"&gt;&#xD;
+      Foto de La Rosa del Sol n&amp;#250;mero 1&#xD;
+    &lt;/p&gt;</rdfs:comment>
+  </schema:Photograph>
 </rdf:RDF>
 
 <!-- Created with Protege (with OWL Plugin 3.5, Build 663)  http://protege.stanford.edu -->
