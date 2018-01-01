@@ -1,4 +1,4 @@
-; Sat Dec 30 15:30:22 CET 2017
+; Mon Jan 01 16:29:46 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,11 +6,11 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[practica3_ProjectKB_Class2609]
-		[practica3_ProjectKB_Class2610]
-		[practica3_ProjectKB_Class2611]
-		[practica3_ProjectKB_Class2612]
-		[practica3_ProjectKB_Class2613]))
+		[practica3_ProjectKB_Class5012]
+		[practica3_ProjectKB_Class5013]
+		[practica3_ProjectKB_Class5014]
+		[practica3_ProjectKB_Class5015]
+		[practica3_ProjectKB_Class5016]))
 
 ([CLSES_TAB] of  Widget
 
@@ -946,9 +946,6 @@
 ([KB_635552_Instance_9] of  Property_List
 )
 
-([KB_671788_Class0] of  Map
-)
-
 ([KB_691299_Instance_398] of  Widget
 
 	(is_hidden FALSE)
@@ -962,6 +959,9 @@
 	(name "http://www.w3.org/2002/07/owl#ObjectProperty")
 	(property_list [XY_Instance_462])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget"))
+
+([KB_702410_Class0] of  Map
+)
 
 ([KB_713803_Instance_10] of  Widget
 
@@ -5431,31 +5431,6 @@
 ([practica3_ProjectKB_Class26] of  Property_List
 )
 
-([practica3_ProjectKB_Class2609] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Class")
-	(string_value "%3ANAME"))
-
-([practica3_ProjectKB_Class2610] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([practica3_ProjectKB_Class2611] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([practica3_ProjectKB_Class2612] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([practica3_ProjectKB_Class2613] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Thing")
-	(string_value "%3ANAME"))
-
 ([practica3_ProjectKB_Class27] of  Widget
 
 	(is_hidden TRUE)
@@ -5578,6 +5553,31 @@
 
 ([practica3_ProjectKB_Class50] of  Property_List
 )
+
+([practica3_ProjectKB_Class5012] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Class")
+	(string_value "%3ANAME"))
+
+([practica3_ProjectKB_Class5013] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([practica3_ProjectKB_Class5014] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([practica3_ProjectKB_Class5015] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([practica3_ProjectKB_Class5016] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Thing")
+	(string_value "%3ANAME"))
 
 ([practica3_ProjectKB_Class51] of  Widget
 
