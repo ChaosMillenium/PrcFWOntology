@@ -1,0 +1,163 @@
+@prefix schema:  <http://schema.org#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl:    <http://www.w3.org/2003/11/swrl#> .
+@prefix protege:  <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix default:  <http://www.ejemplo.org/ontologias/CasasRurales.owl#> .
+@prefix xsp:     <http://www.owl-ontologies.com/2005/08/07/xsp.owl#> .
+@prefix swrlb:   <http://www.w3.org/2003/11/swrlb#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+schema:Place
+      a       owl:Class .
+
+default:email
+      a       owl:DatatypeProperty ;
+      rdfs:domain default:CasaRural ;
+      rdfs:range xsd:string .
+
+default:HabitacionDoble
+      a       owl:Class ;
+      rdfs:subClassOf default:Servicios ;
+      owl:disjointWith default:Cuna , default:HabitacionSimple .
+
+default:precio
+      a       owl:DatatypeProperty ;
+      rdfs:domain default:Servicios ;
+      rdfs:range xsd:float .
+
+default:HabitacionDobleAltaLaRosaDelSol
+      a       default:HabitacionDoble ;
+      default:precio "50.0"^^xsd:float ;
+      default:precioServicio
+              default:TemporadaAltaLaRosaDelSol .
+
+schema:streetAddress
+      a       owl:DatatypeProperty ;
+      rdfs:domain schema:PostalAddress ;
+      rdfs:range xsd:string .
+
+default:duracion
+      a       owl:DatatypeProperty ;
+      rdfs:domain default:Precios ;
+      rdfs:range xsd:string .
+
+schema:StructuredValue
+      a       owl:Class ;
+      rdfs:subClassOf schema:Intangible .
+
+default:HabitacionSimple
+      a       owl:Class ;
+      rdfs:subClassOf default:Servicios ;
+      owl:disjointWith default:Cuna , default:HabitacionDoble .
+
+default:Informacion
+      a       owl:Class .
+
+default:TemporadaBajaLaRosaDelSol
+      a       default:Precios ;
+      default:duracion "Resto del año"^^xsd:string .
+
+schema:addressCountry
+      a       owl:DatatypeProperty ;
+      rdfs:domain schema:PostalAddress ;
+      rdfs:range xsd:string .
+
+default:precioServicio
+      a       owl:ObjectProperty ;
+      rdfs:domain default:Servicios ;
+      rdfs:range default:Precios .
+
+schema:Accomodation
+      a       owl:Class ;
+      rdfs:subClassOf schema:Place .
+
+default:TemporadaAltaLaRosaDelSol
+      a       default:Precios ;
+      default:duracion "Navidad, Semana Satana, verano y puentes"^^xsd:string .
+
+schema:telephone
+      a       owl:DatatypeProperty ;
+      rdfs:domain schema:Place ;
+      rdfs:range xsd:string .
+
+default:Ofertas
+      a       owl:Class ;
+      rdfs:subClassOf default:Informacion ;
+      owl:disjointWith default:Noticias .
+
+default:HabitacionDobleBajaLaRosaDelSol
+      a       default:HabitacionDoble ;
+      default:precio "40.0"^^xsd:float ;
+      default:precioServicio
+              default:TemporadaBajaLaRosaDelSol .
+
+schema:PostalAddress
+      a       owl:Class ;
+      rdfs:subClassOf schema:ContactPoint .
+
+<http://www.ejemplo.org/ontologias/CasasRurales.owl>
+      a       owl:Ontology .
+
+default:Servicios
+      a       owl:Class .
+
+schema:ContactPoint
+      a       owl:Class ;
+      rdfs:subClassOf schema:StructuredValue .
+
+default:Noticias
+      a       owl:Class ;
+      rdfs:subClassOf default:Informacion ;
+      owl:disjointWith default:Ofertas .
+
+default:CasaRural
+      a       owl:Class ;
+      rdfs:subClassOf schema:Accomodation .
+
+schema:addressLocality
+      a       owl:DatatypeProperty ;
+      rdfs:domain schema:PostalAddress ;
+      rdfs:range xsd:string .
+
+default:Cuna
+      a       owl:Class ;
+      rdfs:subClassOf default:Servicios ;
+      owl:disjointWith default:HabitacionDoble , default:HabitacionSimple .
+
+schema:addressRegion
+      a       owl:DatatypeProperty ;
+      rdfs:domain schema:PostalAddress ;
+      rdfs:range xsd:string .
+
+default:LaRosaDelSol
+      a       default:CasaRural ;
+      schema:telephone "637926312"^^xsd:string , "636885553"^^xsd:string ;
+      default:direccion default:CalleLaRosaDelSol ;
+      default:email "laRosaDelSolCadiz@gmail.com"^^xsd:string .
+
+default:CalleLaRosaDelSol
+      a       schema:PostalAddress ;
+      schema:addressCountry
+              "Spain"^^xsd:string ;
+      schema:addressLocality
+              "Cádiz"^^xsd:string ;
+      schema:addressRegion
+              "Andalucía"^^xsd:string ;
+      schema:streetAddress
+              "Carretera Prado del Rey - Zahara de La Sierra (ca-8102) Km.3"^^xsd:string .
+
+default:Precios
+      a       owl:Class .
+
+schema:Intangible
+      a       owl:Class .
+
+default:direccion
+      a       owl:ObjectProperty ;
+      rdfs:comment """<p style=\"margin-top: 0\">
+      Relaci&#243;n Casas Rurales y Direcci&#243;n
+    </p>"""^^xsd:string ;
+      rdfs:domain default:CasaRural ;
+      rdfs:range schema:PostalAddress .
