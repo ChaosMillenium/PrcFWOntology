@@ -20,6 +20,7 @@ Iván Chicano Capelo
 Daniel Diz Molinero</rdfs:comment>
   </owl:Ontology>
   <owl:Class rdf:about="http://schema.org/#Place"/>
+
   <owl:Class rdf:about="http://schema.org/#AggregateRating">
     <rdfs:subClassOf>
       <owl:Class rdf:about="http://schema.org/#Rating"/>
@@ -67,10 +68,12 @@ Daniel Diz Molinero</rdfs:comment>
           <owl:DatatypeProperty rdf:about="http://schema.org/#addressRegion"/>
         </owl:onProperty>
       </owl:Restriction>
+
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:ID="HabitacionDoble">
     <owl:disjointWith>
+
       <owl:Class rdf:ID="Cuna"/>
     </owl:disjointWith>
     <owl:disjointWith>
@@ -182,8 +185,15 @@ Daniel Diz Molinero</rdfs:comment>
   <owl:Class rdf:about="#Restaurante">
     <rdfs:subClassOf>
       <owl:Class rdf:ID="SalasComunes"/>
+
     </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://schema.org/#Accomodation"/>
+    </rdfs:subClassOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Clase que relaciona las casas rurales con sus propiedades.</rdfs:comment>
   </owl:Class>
+
   <owl:Class rdf:ID="Playa">
     <rdfs:subClassOf rdf:resource="#Actividades"/>
   </owl:Class>
@@ -207,10 +217,12 @@ Daniel Diz Molinero</rdfs:comment>
           <owl:ObjectProperty rdf:about="http://schema.org/#subjectOf"/>
         </owl:onProperty>
       </owl:Restriction>
+
     </rdfs:subClassOf>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Clase que relaciona las casas rurales con sus propiedades.</rdfs:comment>
   </owl:Class>
+
   <owl:Class rdf:about="http://schema.org/#Photograph">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Informacion sobre fotografias</rdfs:comment>
@@ -230,6 +242,7 @@ Daniel Diz Molinero</rdfs:comment>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="#Cuna">
+
     <rdfs:subClassOf rdf:resource="#Servicios"/>
     <owl:disjointWith rdf:resource="#HabitacionSimple"/>
     <owl:disjointWith rdf:resource="#HabitacionDoble"/>
@@ -242,6 +255,7 @@ Daniel Diz Molinero</rdfs:comment>
       <owl:Class rdf:about="#SalasComunes"/>
     </rdfs:subClassOf>
   </owl:Class>
+
   <owl:Class rdf:about="http://schema.org/#CreativeWork">
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdfs:subClassOf>
@@ -263,8 +277,40 @@ Daniel Diz Molinero</rdfs:comment>
     </rdfs:subClassOf>
   </owl:Class>
   <owl:Class rdf:about="#SalasComunes">
+
     <rdfs:subClassOf rdf:resource="#Servicios"/>
+    <owl:disjointWith rdf:resource="#HabitacionDoble"/>
+    <owl:disjointWith rdf:resource="#HabitacionSimple"/>
   </owl:Class>
+  <owl:Class rdf:about="http://schema.org/#CreativeWork">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="http://schema.org/#about"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://schema.org/#Accomodation">
+    <rdfs:subClassOf rdf:resource="http://schema.org/#Place"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://schema.org/#Article">
+    <owl:disjointWith rdf:resource="http://schema.org/#Photograph"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/#CreativeWork"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="http://schema.org/#articleBody"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
   <owl:Class rdf:about="http://schema.org/#Article">
     <owl:disjointWith rdf:resource="http://schema.org/#Photograph"/>
     <rdfs:subClassOf>
@@ -288,12 +334,14 @@ Daniel Diz Molinero</rdfs:comment>
     <rdfs:domain rdf:resource="#Servicios"/>
     <rdfs:range rdf:resource="#Temporadas"/>
   </owl:ObjectProperty>
+
   <owl:ObjectProperty rdf:ID="LugaresInteresDe">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Describe los lugares de interés próximos a una casa rural</rdfs:comment>
     <rdfs:domain rdf:resource="#CasaRural"/>
     <rdfs:range rdf:resource="#LugaresInteres"/>
   </owl:ObjectProperty>
+
   <owl:ObjectProperty rdf:ID="DisponibilidadPiscina">
     <rdfs:range rdf:resource="#Temporadas"/>
     <rdfs:domain rdf:resource="#Piscina"/>
@@ -308,6 +356,7 @@ Daniel Diz Molinero</rdfs:comment>
       <owl:ObjectProperty rdf:about="http://schema.org/#about"/>
     </owl:inverseOf>
   </owl:ObjectProperty>
+
   <owl:ObjectProperty rdf:about="http://schema.org/#address">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
     >Relación de Dirección</rdfs:comment>
@@ -321,7 +370,9 @@ Daniel Diz Molinero</rdfs:comment>
     </rdfs:domain>
     <rdfs:range rdf:resource="http://schema.org/#PostalAddress"/>
   </owl:ObjectProperty>
+
   <owl:ObjectProperty rdf:ID="Evento">
+
     <rdfs:domain rdf:resource="#CasaRural"/>
     <rdfs:range rdf:resource="http://schema.org/#Event"/>
   </owl:ObjectProperty>
@@ -329,18 +380,24 @@ Daniel Diz Molinero</rdfs:comment>
     <owl:inverseOf rdf:resource="http://schema.org/#subjectOf"/>
     <rdfs:domain rdf:resource="http://schema.org/#CreativeWork"/>
   </owl:ObjectProperty>
+
   <owl:DatatypeProperty rdf:ID="email">
     <rdfs:domain rdf:resource="#CasaRural"/>
+
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://schema.org/#Place"/>
   </owl:DatatypeProperty>
+
   <owl:DatatypeProperty rdf:ID="reviewCount">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     <rdfs:domain rdf:resource="http://schema.org/#AggregateRating"/>
+
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="precio">
     <rdfs:domain rdf:resource="#Servicios"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
   </owl:DatatypeProperty>
+
   <owl:DatatypeProperty rdf:ID="duracion">
     <rdfs:domain rdf:resource="#Temporadas"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -362,12 +419,15 @@ Daniel Diz Molinero</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://schema.org/#articleBody">
+
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://schema.org/#Article"/>
   </owl:DatatypeProperty>
+
   <owl:DatatypeProperty rdf:about="http://schema.org/#telephone">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://schema.org/#Place"/>
+
   </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:about="http://schema.org/#addressRegion">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -400,7 +460,9 @@ Daniel Diz Molinero</rdfs:comment>
     <rdfs:domain rdf:resource="#Temporadas"/>
   </owl:SymmetricProperty>
   <HabitacionDoble rdf:ID="HabitacionDobleAltaLaRosaDelSol">
+
     <PrecioServicio>
+
       <Temporadas rdf:ID="TemporadaAltaLaRosaDelSol">
         <duracion rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
         >Navidad, Semana Satana, verano y puentes</duracion>
@@ -409,11 +471,14 @@ Daniel Diz Molinero</rdfs:comment>
       Duraci&amp;#243;n de la temporada Alta de La Rosa del Sol&#xD;
     &lt;/p&gt;</rdfs:comment>
       </Temporadas>
+
     </PrecioServicio>
+
     <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
     >50.0</precio>
   </HabitacionDoble>
   <HabitacionDoble rdf:ID="HabitacionDobleBajaLaRosaDelSol">
+
     <precio rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
     >40.0</precio>
     <PrecioServicio>
