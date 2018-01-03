@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>La Rosa Del Sol</title>
+	<meta charset='utf-8' />
+	<link rel='stylesheet' type='text/css' href='estilos/main.css'>
+	<link rel='stylesheet' type='text/css' href='estilos/noticiasOfertas.css'>
+	<link rel="shortcut icon" type="image/x-icon" href="fotografias/favicon.ico">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body prefix="schema:http://schema.org/ default=http://www.ejemplo.org/ontologias/CasasRurales.owl">
+	<div id="cuerpo">
+		<div id="banner">
+			<h1>La Rosa Del Sol</h1>
+		</div>
+		<div id="menu">	
+			<ul class="lista-ul">
+				<span id="menu-click"><b>Menú &#8628;</b></span>
+				<li><a class="menu-selector" href="index.html"><b>Datos de la casa</b></a></li>
+				<li><a class="menu-selector" href="localizacion.html"><b>Localización</b></a></li>
+				<li><a class="menu-selector" href="tarifas.html"><b>Tarifas</b></a></li>
+				<li><a class="menu-selector" href="actividades.html"><b>Actividades</b></a></li>
+				<li><a class="menu-selector" href="noticiasOferta.html"><b>Noticias y ofertas</b></a></li>
+				<li><a class="menu-selector" href="lugaresInteres.html"><b>Lugares de interés</b></a></li>
+				<li><a class="menu-selector" href="valoraciones.html"><b>Valoraciones</b></a></li>
+			</ul>
+		</div>
+		<script src="scripts/menu.js">Esta página necesita JavaScript</script>
+		<div id="datos" typeof="schema:Article">
+			<div class="oferta" resource="#Ruta_de_los_Pueblos_Blancos" typeof="default:Ofertas">
+				<span class="fecha" property="schema:datePublished"><b>10/11/2017</b></span>
+				<h1>Oferta: Ruta de los Pueblos Blancos</h1>
+				<div property="schema:articleBody">
+					<p>Durante las siguientes semanas, de forma gratuita al solicitar la casa se ofrece una ruta guiada por los Pueblos Blancos.</p>
+					<p>Para más información contáctenos mediante los medios ofrecidos en la página principal.</p>
+					<p>Descripción detallada sobre la ruta en la sección <b><a href="lugaresInteres.html">Lugares de interés</a></b>.</p>
+				</div>
+			</div>
+			<div class="noticia" resource="#Cierre_temporal_de_la_casa" typeof="schema:NewsArticle">
+				<span class="fecha" property="schema:datePublished"><b>18/03/2017</b></span>
+				<h1>Cierre temporal de la casa</h1>
+				<div property="schema:articleBody">
+					<p>La casa no podrá ser solicitada hasta el 25 de Marzo debido a una plaga de termitas.</p>
+					<p>Disculpen las molestias.</p>
+				</div>
+			</div>
+			<div class="oferta" resource="#Grupo_numeroso" typeof="default:Ofertas">
+				<span class="fecha" property="schema:datePublished"><b>23/12/2016</b></span>
+				<h1>Oferta: Grupo numeroso</h1>	
+				<div property="schema:articleBody">				
+					<p>Durante el periodo vacacional, para grupos de más de 15 personas se ofrece un descuento del 15% del precio total establecido en la sección <a href="tarifas.html"><b>Tarifas</a></b>.</p>
+					<p>Esta oferta finalizará el <span property="default:limiteOferta">31 de Enero</span>.</p>
+				</div>
+			</div>
+			<script src="scripts/noticiasOfertas.js">Esta página necesita JavaScript</script>
+		</div>
+	</div>
+</body>
+</html>

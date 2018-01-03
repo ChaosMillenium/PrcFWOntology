@@ -1,0 +1,31 @@
+SELECT ?casa ?temp ?indivServ ?precio
+WHERE{
+	?serv rdfs:subClassOf :Servicios.
+	?indivServ rdf:type ?serv.
+	?indivServ :precio ?precio.
+	?indivServ :PrecioServicio ?temp.
+	?temp :TemporadasCasaRural ?casa.
+FILTER (?precio <=45.5)
+}
+
+SELECT ?casa ?foto
+WHERE {
+	?casa rdf:type :CasaRural.
+	?casa schema:subjectOf ?foto.
+	?foto rdf:type schema:Photograph
+	
+}
+
+SELECT ?act ?precio  ?casa  
+WHERE{
+	?act :costeActividad ?precio.
+	?casa :ActividadesDisponibles ?act.
+FILTER (?precio >= 15.0)
+}
+
+SELECT ?casa ?precio ?piscina ?temp
+WHERE {
+	?piscina :precio ?precio.
+	?casa :PiscinaAsociada ?piscina.	
+	?piscina :PrecioServicio ?temp
+}

@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>La Rosa Del Sol</title>	<meta charset='utf-8' />
+	<link rel='stylesheet' type='text/css' href='estilos/main.css'>
+	<link rel='stylesheet' type='text/css' href='estilos/tabs.css'>
+	<link rel="shortcut icon" type="image/x-icon" href="fotografias/favicon.ico">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body prefix="schema:http://schema.org/ default:http://www.ejemplo.org/ontologias/CasasRurales.owl>
+	<div id="cuerpo">
+		<div id="banner">
+			<h1>La Rosa Del Sol</h1>
+		</div>
+		<div id="menu">	
+			<ul class="lista-ul">
+				<span id="menu-click"><b>Menú &#8628;</b></span>
+				<li><a class="menu-selector" href="index.html"><b>Datos de la casa</b></a></li>
+				<li><a class="menu-selector" href="localizacion.html"><b>Localización</b></a></li>
+				<li><a class="menu-selector" href="tarifas.html"><b>Tarifas</b></a></li>
+				<li><a class="menu-selector" href="actividades.html"><b>Actividades</b></a></li>
+				<li><a class="menu-selector" href="noticiasOferta.html"><b>Noticias y ofertas</b></a></li>
+				<li><a class="menu-selector" href="lugaresInteres.html"><b>Lugares de interés</b></a></li>
+				<li><a class="menu-selector" href="valoraciones.html"><b>Valoraciones</b></a></li>
+			</ul>
+		</div>
+		<script src="scripts/menu.js">Esta página necesita JavaScript</script>
+		
+		<div id="datos">
+			<div id="tabs">
+			
+				<ul>
+					<li><a href="#actividad1">Capeas</a></li>
+					<li><a href="#actividad2">Senderismo</a></li>
+					<li><a href="#actividad3">Ganaderia</a></li>
+				</ul>
+				<div id="actividad1" typeof="default:Actividades">
+					<p>En tauromaquia, una capea es un festejo en el que participan aficionados que torean a vaquillas y novillos sin matarlos.​​ Suelen organizarse en las fiestas de distintos pueblos o en despedidas de solteros (Previo acuerdo)</p>
+					<p><img src="fotografias/rosa5.jpg" width=720px /></p>
+					<p><a target="_blank" href="pdf/capeas.pdf">PDF de Capeas</a></p>
+				</div>
+				<div id="actividad2" typeof="default:Senderismo" resource="#Senderismo_La_Rosa_Del_Sol">
+					<p>Nos encontramos en las puertas del Parque Natural de la Sierra de Grazalema,  muy bien comunicados para que podais elegir entre cualquiera de las  alternativas que se ofrecen 
+						en la comarca: disfrutar de nuestras gentes,  deleitarse con la gastronomía serrana, conocer nuestras numerosas  rutas  (Ruta de los Pueblos Blancos, Vía Verde de la Sierra, 
+						Ruta del  Toro Bravo...)</p>
+					<p><img src="fotografias/rosa6.jpg" width=720px /></p>
+					<p><a target="_blank" href="pdf/senderismo.pdf">PDF de Senderismo</a></p>
+				</div>
+				<div id="actividad3" typeof="default:Ganaderia" resource="#Ganaderia_La_Rosa_Del_Sol">
+					<p>Los diferentes lotes de madres y sementales de nuestra Ganadería están repartidos por diferentes Fincas que comprenden los términos municipales de Prado del Rey, El Bosque y 
+						Zahara de la Sierra. Estas fincas son: Finca Fuente Tío (Prado del Rey), Finca El Algamazón (El Bosque) , Finca El Puerto del Lobo (Prado del Rey), Llano del Mochuelo (Prado 
+						del Rey), Rancho Tornay (Prado del Rey), Rancho Júcar (Prado del Rey) y Finca La Rosa del Sol (Prado del Rey) en donde se encuentra el corazón de la Ganadería con el Cortijo, 
+						Cerrados y Plaza de Tientas. 
+						Podrá usted realizar las actividades realizadas tradicionalmente por los ganaderos de la zonas (Más información en nuestra página web)</p>
+					<p><img src="fotografias/rosa7.jpg"  /></p>
+					<p><a target="_blank" href="pdf/ganaderia.pdf">PDF de Ganaderia</a></p>
+				</div>
+			</div>
+		</div>
+		<script src="scripts/actividadesJS.js"></script>
+	</div>
+</body>
+</html>
