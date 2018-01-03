@@ -1,0 +1,9 @@
+SELECT ?casa ?indivServ ?precio ?temp
+WHERE{
+	?serv rdfs:subClassOf :Servicios.
+	?indivServ rdf:type ?serv.
+	?indivServ :precio ?precio.
+	?indivServ :precioServicio ?temp.
+	?temp :CasaDeTemporada ?casa.
+FILTER (?precio <=45.5)
+}
