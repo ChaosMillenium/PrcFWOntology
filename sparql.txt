@@ -14,6 +14,7 @@ WHERE {
 	?casa schema:subjectOf ?foto.
 	?foto rdf:type schema:Photograph
 	
+
 }
 
 SELECT ?act ?precio  ?casa  
@@ -28,4 +29,5 @@ WHERE {
 	?piscina :precio ?precio.
 	?casa :PiscinaAsociada ?piscina.	
 	?piscina :PrecioServicio ?temp
+
 }
