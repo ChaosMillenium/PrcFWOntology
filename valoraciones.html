@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>La Rosa Del Sol</title>
+	<meta charset='utf-8' />
+	<link rel='stylesheet' type='text/css' href='estilos/main.css'>
+	<link rel='stylesheet' type='text/css' href='estilos/jquery.rateyo.min.css'>
+	<link rel='stylesheet' type='text/css' href='estilos/valoraciones.css'>
+	<link rel="shortcut icon" type="image/x-icon" href="fotografias/favicon.ico">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="scripts/Valoraciones/jquery.rateyo.min.js"></script>
+</head>
+<body prefix="schema:http://schema.org/ default:http://www.ejemplo.org/ontologias/CasasRurales.owl/">
+	<div id="cuerpo">
+		<div id="banner">
+			<h1>La Rosa Del Sol</h1>
+		</div>
+		<div id="menu">	
+			<ul class="lista-ul">
+				<span id="menu-click"><b>Menú &#8628;</b></span>
+				<li><a class="menu-selector" href="index.html"><b>Datos de la casa</b></a></li>
+				<li><a class="menu-selector" href="localizacion.html"><b>Localización</b></a></li>
+				<li><a class="menu-selector" href="tarifas.html"><b>Tarifas</b></a></li>
+				<li><a class="menu-selector" href="actividades.html"><b>Actividades</b></a></li>
+				<li><a class="menu-selector" href="noticiasOferta.html"><b>Noticias y ofertas</b></a></li>
+				<li><a class="menu-selector" href="lugaresInteres.html"><b>Lugares de interés</b></a></li>
+				<li><a class="menu-selector" href="valoraciones.html"><b>Valoraciones</b></a></li>
+			</ul>
+		</div>
+		<script src="scripts/menu.js">Esta página necesita JavaScript</script>
+		<div id="informacion" typeof="schema:Rating">
+				<h2>Valoraciones de otros usuarios:</h2>
+		</div>
+		<div id="datos">
+			<h1>¡Valore nuestra casa!</h1>
+			<p><b>Nombre de usuario: </b></p>
+			<input id="name" type="text">
+			<p><b>Valoracion: </b></p>
+			<div id="rateYo">
+			</div>
+			<br>
+			<button id="enviarValoracion">Mandar valoración</button>
+			<br>
+			<p id="agradecimiento">¡Gracias por valorar nuestra casa!</p>
+		</div>
+	</div>	
+	<script src="scripts/valoracionesJS.js">Esta página necesita JavaScript</script>
+</body>
+</html>

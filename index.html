@@ -1,0 +1,72 @@
+﻿<html>
+<head>
+	<title>La Rosa Del Sol</title>
+	<meta charset='utf-8' />
+	<link rel='stylesheet' type='text/css' href='estilos/main.css'>
+	<link rel='stylesheet' type='text/css' href='estilos/slick.css'>
+	<link rel='stylesheet' type='text/css' href='estilos/slick-theme.css'>
+	<link rel="shortcut icon" type="image/x-icon" href="fotografias/favicon.ico">
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="scripts/Carrusel/slick.min.js"></script>
+</head>
+<body prefix="schema:http://schema.org/ default:http://www.ejemplo.org/ontologias/CasasRurales.owl">
+	<div id="cuerpo" resource="#La_Rosa_Del_Sol" typeof="default:CasaRural">
+		<div id="banner">
+			<h1>La Rosa Del Sol</h1>
+		</div>
+		<div id="menu">	
+			<ul class="lista-ul">
+				<span id="menu-click"><b>Menú &#8628;</b></span>
+				<li><a class="menu-selector" href="index.html"><b>Datos de la casa</b></a></li>
+				<li><a class="menu-selector" href="localizacion.html"><b>Localización</b></a></li>
+				<li><a class="menu-selector" href="tarifas.html"><b>Tarifas</b></a></li>
+				<li><a class="menu-selector" href="actividades.html"><b>Actividades</b></a></li>
+				<li><a class="menu-selector" href="noticiasOferta.html"><b>Noticias y ofertas</b></a></li>
+				<li><a class="menu-selector" href="lugaresInteres.html"><b>Lugares de interés</b></a></li>
+				<li><a class="menu-selector" href="valoraciones.html"><b>Valoraciones</b></a></li>
+			</ul>
+		</div>
+		<script src="scripts/menu.js">Esta página necesita JavaScript</script>
+		<div id="informacion">
+			<ul class="lista-ul">
+				<li><b><p><u>Teléfonos de contacto:</u></p></b></li>
+				<li><b><p><span property="schema:telephone">637926312</span> / <span property="schema:telephone">636885553</span></p></b></li>
+				<li><b><p><u>Correo Electrónico:</u></p></b></li>
+				<li><b><p><span property="default:email">laRosaDelSolCadiz@gmail.com</span></p></b></li>
+				<div resource="#CalleLaRosaDelSol" typeof="schema:PostalAddress">
+					<li><b><p><u>Dirección Postal:</u></p></b></li>
+					<li><b><p><span property="schema:streetAddress">Carretera Prado del Rey - Zahara de La Sierra (ca-8102) Km.3</span></p></b></li>
+					<li><b><p>11660</p></b></li>
+					<li><b><p>Prado del Rey (<span property="schema:addressLocality">Cádiz</span>)</p></b></li>
+				</div>
+				
+			</ul>
+		</div>
+		<div id="datos">
+			<h1><em>La Rosa del Sol</em></h1>
+			<p>El Cortijo está enclavado en el <b>Parque Natural Sierra de Grazalema</b>, en el corazón de la Ruta de los Pueblos Blancos, y a un paso del Parque Natural de los Alcornocales, además el 
+			Alojamiento se encuentra en el corazón de la <em>Ganadería de Reses de Lidia "Herederos de D. Pedro Fernández"</em>, por lo que el ambiente campero y rural está más que garantizado.</p>  
+			<p>El caserío está compuesto por dos edificaciones independientes conectadas entre sí por un acogeor patio. El cuerpo principal está compuesto por 4 habitaciones dobles (Todas ellas 
+			con aire acondicionado y calefacción) un baño y un salón-comedor con chimenea y aire acondicionado. En el segundo cuerpo de casa se encuentra la cocina-comedor tambien con una gran 
+			chimenea, un baño y dos habitaciones (Con aire acondicionado y calefacción). Además disponemos de una gran piscina con unas dimensiones de 10 x 6 m., de agua salada, con "playa 
+			sumergida" para tumbonas, dos lados infinity y un perímetro de 0,50 m. de profundidad para niños pequeños.</p>  
+			<p>También como zonas a destacar tenemos: una pequeña y coqueta plaza de toros, donde podríais asistir u organizar alguna capea; un patio andaluz, con una zona resguardada con arcos; 
+			y una finca, donde podréis pasear y disfrutar del aire puro y de nuestras inmejorables vistas.</p>
+			<p>El Cortijo La Rosa del Sol está compuesto por dos edificaciones independiente conectadas entre sí por un acogedor patio. 
+			Como zonas destacables tenemos una pequeña y coqueta plaza de tientas, donde podríais asistir u organizar alguna capea; un típico patio andaluz, con una zona resguardada con arcos; una extensa finca,
+			donde podréis pasear y disfrutar del aire puro y de nuestras inmejorables vistas, y por último resaltar nuestra gran piscina, con unas dimensiones de 10x6, 2 bordes infinity, agua salada, playa inundada
+			para tumbonas y zona de niños de 0,40 m. de profundidad.</p>
+			<div id="carrusel">
+				<p><img resource="#LaRosaDelSolFoto1" property="schema:subjectOf" typeof="schema:Photograph" src="fotografias/rosa11.jpg" /></p>
+				<p><img property="schema:subjectOf" typeof="schema:Photograph" src="fotografias/rosa12.jpg" /></p>
+				<p><img property="schema:subjectOf" typeof="schema:Photograph" src="fotografias/rosa2.jpg" /></p>
+				<p><img property="schema:subjectOf" typeof="schema:Photograph" src="fotografias/rosa3.jpg" /></p>
+				<p><img property="schema:subjectOf" typeof="schema:Photograph" src="fotografias/rosa4.jpg" /></p>
+			</div>
+			<br>
+			<p id="video"><video src="videos/rosaVideo1.webm"  poster="/fotografias/rosa4.jpg" controls>El navegador no ha podido reproducir el vídeo </video></p>
+		</div>
+	</div>
+	<script src="scripts/carruselJS.js">Esta página necesita Javascript</script>
+</body>
+</html>
