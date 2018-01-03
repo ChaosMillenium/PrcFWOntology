@@ -1,4 +1,6 @@
-; Wed Jan 03 16:41:00 CET 2018
+
+; Wed Jan 03 18:21:44 CET 2018
+
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -6,11 +8,13 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-		[practica3_ProjectKB_Class10179]
-		[practica3_ProjectKB_Class10180]
-		[practica3_ProjectKB_Class10181]
-		[practica3_ProjectKB_Class10182]
-		[practica3_ProjectKB_Class10183]))
+
+		[practica3_ProjectKB_Class4574]
+		[practica3_ProjectKB_Class4575]
+		[practica3_ProjectKB_Class4576]
+		[practica3_ProjectKB_Class4577]
+		[practica3_ProjectKB_Class4578]))
+
 
 ([CLSES_TAB] of  Widget
 
@@ -5351,30 +5355,6 @@
 ([practica3_ProjectKB_Class10] of  Property_List
 )
 
-([practica3_ProjectKB_Class10179] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Class")
-	(string_value "%3ANAME"))
-
-([practica3_ProjectKB_Class10180] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([practica3_ProjectKB_Class10181] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([practica3_ProjectKB_Class10182] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([practica3_ProjectKB_Class10183] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Thing")
-	(string_value "%3ANAME"))
 
 ([practica3_ProjectKB_Class11] of  Widget
 
@@ -5493,6 +5473,22 @@
 ([practica3_ProjectKB_Class34] of  Property_List
 )
 
+
+([practica3_ProjectKB_Class3494] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://www.ejemplo.org/ontologias/CasasRurales.owl#DisponibilidadPiscina_4")
+	(property_list [practica3_ProjectKB_Class3495])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.MultiResourceWidget")
+	(width 200)
+	(x 0)
+	(y 300))
+
+([practica3_ProjectKB_Class3495] of  Property_List
+)
+
+
 ([practica3_ProjectKB_Class35] of  Widget
 
 	(is_hidden TRUE)
@@ -5507,6 +5503,22 @@
 	(is_hidden TRUE)
 	(property_list [practica3_ProjectKB_Class38])
 	(widget_class_name "edu.stanford.smi.protege.keywordsearch.StringSearch"))
+
+
+([practica3_ProjectKB_Class3796] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://www.ejemplo.org/ontologias/CasasRurales.owl#PiscinaAsociada")
+	(property_list [practica3_ProjectKB_Class3797])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.MultiResourceWidget")
+	(width 200)
+	(x 0)
+	(y 540))
+
+([practica3_ProjectKB_Class3797] of  Property_List
+)
+
 
 ([practica3_ProjectKB_Class38] of  Property_List
 )
@@ -5546,6 +5558,32 @@
 	(is_hidden TRUE)
 	(property_list [practica3_ProjectKB_Class46])
 	(widget_class_name "edu.stanford.smi.protege.widget.instance_tree.KnowledgeTreeTab"))
+
+
+([practica3_ProjectKB_Class4574] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([practica3_ProjectKB_Class4575] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Class")
+	(string_value "%3ANAME"))
+
+([practica3_ProjectKB_Class4576] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([practica3_ProjectKB_Class4577] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([practica3_ProjectKB_Class4578] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Thing")
+	(string_value "%3ANAME"))
 
 ([practica3_ProjectKB_Class46] of  Property_List
 )
