@@ -1,6 +1,4 @@
-
-; Tue Jan 02 19:47:49 CET 2018
-
+; Wed Jan 03 16:00:59 CET 2018
 ; 
 ;+ (version "3.5")
 ;+ (build "Build 663")
@@ -8,13 +6,11 @@
 ([BROWSER_SLOT_NAMES] of  Property_List
 
 	(properties
-
-		[practica3_ProjectKB_Class4981]
-		[practica3_ProjectKB_Class4982]
-		[practica3_ProjectKB_Class4983]
-		[practica3_ProjectKB_Class4984]
-		[practica3_ProjectKB_Class4985]))
-
+		[practica3_ProjectKB_Class1721]
+		[practica3_ProjectKB_Class1722]
+		[practica3_ProjectKB_Class1723]
+		[practica3_ProjectKB_Class1724]
+		[practica3_ProjectKB_Class1725]))
 
 ([CLSES_TAB] of  Widget
 
@@ -963,9 +959,6 @@
 	(name "http://www.w3.org/2002/07/owl#ObjectProperty")
 	(property_list [XY_Instance_462])
 	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget"))
-
-([KB_702410_Class0] of  Map
-)
 
 ([KB_713803_Instance_10] of  Widget
 
@@ -5358,11 +5351,6 @@
 ([practica3_ProjectKB_Class10] of  Property_List
 )
 
-([practica3_ProjectKB_Class10055] of  String
-
-	(name "RenameAcrossFiles")
-	(string_value "C:\\Program Files\\Protege_3.5"))
-
 ([practica3_ProjectKB_Class11] of  Widget
 
 	(is_hidden TRUE)
@@ -5378,6 +5366,20 @@
 	(property_list [practica3_ProjectKB_Class14])
 	(widget_class_name "edu.stanford.smi.protegex.widget.pal.PalConstraintsTab"))
 
+([practica3_ProjectKB_Class1385] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://schema.org/#ratingValue")
+	(property_list [practica3_ProjectKB_Class1386])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.MultiLiteralWidget")
+	(width 200)
+	(x 0)
+	(y 300))
+
+([practica3_ProjectKB_Class1386] of  Property_List
+)
+
 ([practica3_ProjectKB_Class14] of  Property_List
 )
 
@@ -5390,11 +5392,50 @@
 ([practica3_ProjectKB_Class16] of  Property_List
 )
 
+([practica3_ProjectKB_Class1627] of  Widget
+
+	(height 120)
+	(is_hidden FALSE)
+	(name "http://schema.org/#ratingCount")
+	(property_list [practica3_ProjectKB_Class1628])
+	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.MultiLiteralWidget")
+	(width 200)
+	(x 0)
+	(y 300))
+
+([practica3_ProjectKB_Class1628] of  Property_List
+)
+
 ([practica3_ProjectKB_Class17] of  Widget
 
 	(is_hidden TRUE)
 	(property_list [practica3_ProjectKB_Class18])
 	(widget_class_name "uk.ac.man.cs.mig.coode.owlviz.ui.OWLVizTab"))
+
+([practica3_ProjectKB_Class1721] of  String
+
+	(name ":INSTANCE-ANNOTATION")
+	(string_value "%3AANNOTATION-TEXT"))
+
+([practica3_ProjectKB_Class1722] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Class")
+	(string_value "%3ANAME"))
+
+([practica3_ProjectKB_Class1723] of  String
+
+	(name ":PAL-CONSTRAINT")
+	(string_value "%3APAL-NAME"))
+
+([practica3_ProjectKB_Class1724] of  String
+
+	(name ":META-CLASS")
+	(string_value "%3ANAME"))
+
+([practica3_ProjectKB_Class1725] of  String
+
+	(name "http://www.w3.org/2002/07/owl#Thing")
+	(string_value "%3ANAME"))
 
 ([practica3_ProjectKB_Class18] of  Property_List
 )
@@ -5489,157 +5530,6 @@
 ([practica3_ProjectKB_Class36] of  Property_List
 )
 
-([practica3_ProjectKB_Class3644] of  Widget
-
-	(is_hidden FALSE)
-	(name "http://www.ejemplo.org/ontologias/CasasRurales.owl#TemporadaVeraniega")
-	(property_list [practica3_ProjectKB_Class3647])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.OWLFormWidget"))
-
-([practica3_ProjectKB_Class3647] of  Property_List
-
-	(properties
-		[practica3_ProjectKB_Class3648]
-		[practica3_ProjectKB_Class3651]
-		[practica3_ProjectKB_Class3654]
-		[practica3_ProjectKB_Class3657]
-		[practica3_ProjectKB_Class3659]
-		[practica3_ProjectKB_Class3661]
-		[practica3_ProjectKB_Class3663]
-		[practica3_ProjectKB_Class3665]
-		[practica3_ProjectKB_Class3667]
-		[practica3_ProjectKB_Class3669]))
-
-([practica3_ProjectKB_Class3648] of  Widget
-
-	(height 0)
-	(is_hidden FALSE)
-	(label "Name")
-	(name ":NAME")
-	(property_list [practica3_ProjectKB_Class3649])
-	(width 0)
-	(x 0)
-	(y 0))
-
-([practica3_ProjectKB_Class3649] of  Property_List
-
-	(properties [practica3_ProjectKB_Class3650]))
-
-([practica3_ProjectKB_Class3650] of  Boolean
-
-	(boolean_value TRUE)
-	(name "DisabledByUser"))
-
-([practica3_ProjectKB_Class3651] of  Property_List
-
-	(name "layout properties")
-	(properties
-		[practica3_ProjectKB_Class3652]
-		[practica3_ProjectKB_Class3653]))
-
-([practica3_ProjectKB_Class3652] of  String
-
-	(name "horizontal_stretcher")
-	(string_value "<<all>>"))
-
-([practica3_ProjectKB_Class3653] of  String
-
-	(name "vertical_stretcher")
-	(string_value "<<none>>"))
-
-([practica3_ProjectKB_Class3654] of  Widget
-
-	(height 180)
-	(is_hidden FALSE)
-	(name "http://protege.stanford.edu/plugins/owl/protege#inferredType")
-	(property_list [practica3_ProjectKB_Class3655])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.HeaderWidget")
-	(width 550)
-	(x 0)
-	(y 0))
-
-([practica3_ProjectKB_Class3655] of  Property_List
-
-	(properties [practica3_ProjectKB_Class3656]))
-
-([practica3_ProjectKB_Class3656] of  Boolean
-
-	(boolean_value FALSE)
-	(name "DisabledByUser"))
-
-([practica3_ProjectKB_Class3657] of  Widget
-
-	(is_hidden FALSE)
-	(name "http://www.w3.org/2002/07/owl#versionInfo")
-	(property_list [practica3_ProjectKB_Class3658]))
-
-([practica3_ProjectKB_Class3658] of  Property_List
-)
-
-([practica3_ProjectKB_Class3659] of  Widget
-
-	(is_hidden FALSE)
-	(name "http://www.w3.org/2000/01/rdf-schema#isDefinedBy")
-	(property_list [practica3_ProjectKB_Class3660]))
-
-([practica3_ProjectKB_Class3660] of  Property_List
-)
-
-([practica3_ProjectKB_Class3661] of  Widget
-
-	(is_hidden FALSE)
-	(name "http://www.w3.org/2000/01/rdf-schema#comment")
-	(property_list [practica3_ProjectKB_Class3662]))
-
-([practica3_ProjectKB_Class3662] of  Property_List
-)
-
-([practica3_ProjectKB_Class3663] of  Widget
-
-	(is_hidden FALSE)
-	(name "http://www.w3.org/2000/01/rdf-schema#seeAlso")
-	(property_list [practica3_ProjectKB_Class3664]))
-
-([practica3_ProjectKB_Class3664] of  Property_List
-)
-
-([practica3_ProjectKB_Class3665] of  Widget
-
-	(is_hidden FALSE)
-	(name "http://www.w3.org/2000/01/rdf-schema#label")
-	(property_list [practica3_ProjectKB_Class3666]))
-
-([practica3_ProjectKB_Class3666] of  Property_List
-)
-
-([practica3_ProjectKB_Class3667] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "http://www.ejemplo.org/ontologias/CasasRurales.owl#CasaDeTemporada")
-	(property_list [practica3_ProjectKB_Class3668])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.MultiResourceWidget")
-	(width 200)
-	(x 0)
-	(y 300))
-
-([practica3_ProjectKB_Class3668] of  Property_List
-)
-
-([practica3_ProjectKB_Class3669] of  Widget
-
-	(height 120)
-	(is_hidden FALSE)
-	(name "http://www.ejemplo.org/ontologias/CasasRurales.owl#duracion")
-	(property_list [practica3_ProjectKB_Class3670])
-	(widget_class_name "edu.stanford.smi.protegex.owl.ui.widget.MultiLiteralWidget")
-	(width 200)
-	(x 0)
-	(y 180))
-
-([practica3_ProjectKB_Class3670] of  Property_List
-)
-
 ([practica3_ProjectKB_Class37] of  Widget
 
 	(is_hidden TRUE)
@@ -5703,31 +5593,6 @@
 	(property_list [practica3_ProjectKB_Class50])
 	(widget_class_name "dfki.protege.ontoviz_tab.OntovizTab"))
 
-([practica3_ProjectKB_Class4981] of  String
-
-	(name ":INSTANCE-ANNOTATION")
-	(string_value "%3AANNOTATION-TEXT"))
-
-([practica3_ProjectKB_Class4982] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Class")
-	(string_value "%3ANAME"))
-
-([practica3_ProjectKB_Class4983] of  String
-
-	(name ":PAL-CONSTRAINT")
-	(string_value "%3APAL-NAME"))
-
-([practica3_ProjectKB_Class4984] of  String
-
-	(name ":META-CLASS")
-	(string_value "%3ANAME"))
-
-([practica3_ProjectKB_Class4985] of  String
-
-	(name "http://www.w3.org/2002/07/owl#Thing")
-	(string_value "%3ANAME"))
-
 ([practica3_ProjectKB_Class5] of  Widget
 
 	(is_hidden TRUE)
@@ -5736,7 +5601,6 @@
 
 ([practica3_ProjectKB_Class50] of  Property_List
 )
-
 
 ([practica3_ProjectKB_Class51] of  Widget
 
@@ -5944,8 +5808,8 @@
 		"http://www.w3.org/2003/11/swrl#builtin"
 		"http://www.w3.org/2001/XMLSchema#decimal"
 		"http://www.w3.org/2003/11/swrl#AtomList"
-		"http://www.w3.org/2002/07/owl#equivalentProperty"
 		"http://www.w3.org/2000/01/rdf-schema#Literal"
+		"http://www.w3.org/2002/07/owl#equivalentProperty"
 		"http://www.w3.org/2003/11/swrl#classPredicate"
 		"http://www.w3.org/2001/XMLSchema#long"
 		"http://www.w3.org/2002/07/owl#SomeValuesFromRestriction"
@@ -5957,8 +5821,8 @@
 		":VALUES"
 		":ASSOCIATED-SLOT"
 		"http://www.w3.org/2001/XMLSchema#language"
-		"http://www.w3.org/2002/07/owl#versionInfo"
 		"http://www.w3.org/1999/02/22-rdf-syntax-ns#first"
+		"http://www.w3.org/2002/07/owl#versionInfo"
 		"http://www.w3.org/2001/XMLSchema#base64Binary"
 		"http://www.w3.org/2001/XMLSchema#short"
 		"http://www.w3.org/2002/07/owl#maxCardinality"
@@ -6048,8 +5912,7 @@
 		[KB_632156_Instance_0]
 		[KB_325529_Class4]
 		[empty.owl_ProjectKB_Class5]
-		[empty.owl_ProjectKB_Class6]
-		[practica3_ProjectKB_Class10055]))
+		[empty.owl_ProjectKB_Class6]))
 
 ([STANDARD_CLASS_FORM_WIDGET] of  Widget
 
